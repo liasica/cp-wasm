@@ -55,7 +55,7 @@ func Generate(_ js.Value, _ []js.Value) any {
     }
 
     return map[string]any{
-        "public":  ecdh.PublicKeyEncode(pub),
-        "private": s,
+        "publicKey":  ecdh.PublicKeyEncode(pub),
+        "privateKey": s,
     }
 }
