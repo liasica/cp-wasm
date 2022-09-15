@@ -2,3 +2,5 @@ github.com/liasica/go-encryption v0.0.0-20220827035312-ce0560011f42 h1:zzHdKbZbd
 github.com/liasica/go-encryption v0.0.0-20220827035312-ce0560011f42/go.mod h1:4ArnfpG2GHFeXIs6g6Gv+G1cbd5wLSLjdvNchpBjtKA=
 github.com/liasica/go-encryption v0.0.0-20220827042653-81b4450c3d6c h1:5Fm4MwuHQLhe9U3cE75LklYlo73Hd9QmsLRtc4xCggg=
 github.com/liasica/go-encryption v0.0.0-20220827042653-81b4450c3d6c/go.mod h1:4ArnfpG2GHFeXIs6g6Gv+G1cbd5wLSLjdvNchpBjtKA=
+github.com/liasica/go-encryption v0.0.0-20220829090020-eec663fd47b2 h1:3kuwx/8bujTjugT9P8nRebs2G9XfdWsphaMo1eHGUr0=
+github.com/liasica/go-encryption v0.0.0-20220829090020-eec663fd47b2/go.mod h1:4ArnfpG2GHFeXIs6g6Gv+G1cbd5wLSLjdvNchpBjtKA=

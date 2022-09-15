@@ -24,26 +24,27 @@ func main() {
     console.Info("wasm worked😇🥳🤗")
 
     // generate keys
-    addFunc(func() {
-        js.Global().Set("ecdhGenerate", js.FuncOf(encryption.Generate))
-    })
+    addFunc("ecdhGenerate", encryption.Generate)
 
     // share ecdh keys
-    addFunc(func() {
-        js.Global().Set("ecdhShare", js.FuncOf(encryption.Share))
-    })
+    addFunc("ecdhShare", encryption.Share)
+
+    // encrypt
+    addFunc("ecdhEncrypt", encryption.AesEncrypt)
+
+    // decrypt
+    addFunc("ecdhDecrypt", encryption.AesDecrypt)
 
     <-done
 }
 
-func addFunc(cb func()) {
+func addFunc(name string, fn func(this js.Value, args []js.Value) any) {
     go func() {
         defer func() {
             if r := recover(); r != nil {
                 console.Error(fmt.Sprintf("Recovered from func: %v", r))
             }
         }()
-
-        cb()
+        js.Global().Set(name, js.FuncOf(fn))
     }()
 }
